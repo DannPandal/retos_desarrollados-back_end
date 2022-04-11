@@ -69,9 +69,6 @@ def departamentos_webapp():
         else:
              raise Exception('API no encontrada, status code: ' + str(response.status_code))
 
-        # print(response)
-        # print(response.json())
-
     except Exception as e:
         RESPONSE_BASE["content"] = []
         RESPONSE_BASE["ok"] = False
