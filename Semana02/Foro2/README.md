@@ -4,8 +4,7 @@
 
 ##  2. Intalar las los requerimients.txt
 
-## 3. Ejecutar app.py 
-    $> set FLASK_APP=app
+## 3. Ejecutar app.py
     $> flask run
     $> flask run -p 8080
 
