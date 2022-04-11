@@ -11,5 +11,9 @@
 
 
 ## lista de productos
-    ![Image text](https://github.com/DannPandal/retos_desarrollados-back_end/blob/main/Semana02/Foro2/assets/listproduct.jpg)
+    ![Image text]
+    (https://github.com/DannPandal/retos_desarrollados-back_end/blob/main/Semana02/Foro2/assets/listproduct.jpg)
+
+    ![Image text]
+    (https://github.com/DannPandal/retos_desarrollados-back_end/blob/main/Semana02/Foro2/assets/listproduct.png)
     
