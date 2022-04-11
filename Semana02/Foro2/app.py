@@ -23,13 +23,19 @@ def welcome():
     return "Bienvenido a la API en Flask de productos"
 
 # * GET - devolver lista de productos
-
-
 @app.route('/all_product', methods=['GET'])
 def list_product():
     try:
         #! jsonify indica el formato de salida application/json
         return jsonify(products_list.get_list_products())
+    except Exception as e:
+        return jsonify({"message": RESPONSE_ERROR, "error": str(e)})
+
+@app.route('/product/<string:id>', methods=['GET'])
+def select_product(id):
+    try:
+        #! jsonify indica el formato de salida application/json
+        return jsonify(products_list.get_product(id))
     except Exception as e:
         return jsonify({"message": RESPONSE_ERROR, "error": str(e)})
 
@@ -54,7 +60,7 @@ def add_product():
 
 # * PUT - actualizar producto de lista de productos
 @app.route('/update_product/<string:id>', methods=['PUT'])
-def update_task(id):
+def update_product(id):
     try:
         data_json = request.get_json()
         products_list.update_product(id, data_json)
