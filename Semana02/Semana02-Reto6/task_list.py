@@ -17,6 +17,11 @@ class TaskList:
         list_complete_tasks = {"tasks":[]}
         for task in self.tasks:
             list_complete_tasks["tasks"].append(self.tasks[task].__json__())
+      
+        list_sort = sorted(list_complete_tasks["tasks"], key=lambda x: x["level_priority"])
+        
+        list_complete_tasks = {"tasks":[list_sort]}
+        
         return list_complete_tasks
 
    ## ACTUALIZAR TAREA
@@ -32,7 +37,7 @@ class TaskList:
 
     # CARGA INCIAL DE PRUEBA
     def initial_test(self):
-        new_task1 = Task("Primera Tarea", 1)
+        new_task1 = Task("Primera Tarea", 3)
         self.tasks[new_task1.id] = new_task1
-        new_task2 = Task("SEgunda Tarea", 2)
+        new_task2 = Task("Segunda Tarea", 2)
         self.tasks[new_task2.id] = new_task2

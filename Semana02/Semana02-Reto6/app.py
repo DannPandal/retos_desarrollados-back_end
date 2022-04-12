@@ -2,7 +2,6 @@
 # ! Reto 6: Desarrollar una API para mostrar tareas pendientes
 # * Para este reto deberemos de crear una API en la cual ingresemos una tarea y su prioridad y que nos muestre la lista de tareas con sus prioridades y la opción de poder actualizarla mediante su ID y eliminarla también mediante su ID.
 
-from ssl import ALERT_DESCRIPTION_ACCESS_DENIED
 from flask import Flask,request, jsonify
 from task import Task
 from task_list import TaskList
@@ -11,7 +10,7 @@ app = Flask(__name__)
 
 
 RESPONSE_ERROR = "Error al procesar la petición"
-RESPONSE_ERROR_KEY = "No se encontro el producto con el id ingresado"
+RESPONSE_ERROR_KEY = "No se encontro la tarea con el id ingresado"
 
 #* carga inicial de datos, para pruebas
 task_list_dict = TaskList()
@@ -23,7 +22,7 @@ task_list_dict.initial_test()
 def welcome():
     return "Bienvenido a la API en Flask de prioridad de Tareas"
 
-# * GET - devolver lista de tareas
+# * GET - devolver lista de tareas ordenada
 @app.route('/all_task', methods=['GET'])
 def all_task():
     try:
@@ -32,7 +31,7 @@ def all_task():
         return jsonify({"message": RESPONSE_ERROR, "error": str(e)})
 
 
-# * POST - agregar producto a lista de productos
+# * POST - agregar tarea a lista de tareas
 @app.route('/add_task', methods=['POST'])
 def add_task():
     try:
@@ -44,7 +43,7 @@ def add_task():
     except Exception as e:
         return jsonify({"message": RESPONSE_ERROR, "error": str(e)})
 
-# * PUT - actualizar task de lista de productos
+# * PUT - actualizar tarea de lista
 @app.route('/update_task/<string:id>', methods=['PUT'])
 def update_task(id):
     try:
@@ -56,8 +55,7 @@ def update_task(id):
     except Exception as e:
         return jsonify({"message": RESPONSE_ERROR, "error": str(e)})
 
-
-# * DELETE - borrar producto de lista de productos
+# * DELETE - borrar tarea de lista
 @app.route('/delete_task/<string:id>', methods=['DELETE'])
 def delete_task(id):
     try:
