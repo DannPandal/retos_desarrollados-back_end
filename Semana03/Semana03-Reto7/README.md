@@ -1,9 +1,8 @@
-Foro 3: DESARROLLAR UNA PEQUEÑA API PARA CONSUMO DE CURSOS EN DJANGO CON MODELOS
+Reto 7: Desarrollar API con Base de Datos
 
-Para esta semana ya entramos al uso de Django y una de sus mas grandes fortalezas es que viene incluido un ORM (Enlaces a un sitio externo.) (Object Relational Mapping) en la cual nos ayuda al trabajar con Bases de Datos ya que se maneja en forma de Clases las tablas y ahora pasan a ser llamadas Modelos (Enlaces a un sitio externo.), entonces lo que debemos realizar para esta semana es una pequeña API para consumir en Django, esto significa que debemos de crear los Modelos en el proyecto para que puedan ser utilizados en las Plantillas. 
+Desarrollar una API en la cual se consuma una base de datos en SQLite, en la cual tengamos al menos dos endpoint (uno con verbo GET y otro POST) para mostrar e ingresar respectivamente.
 
-### CRUD CURSOS CON DJANGO
-
+### CRUD PRODUCTOS CON DJANGO
 
 # Seguir los siguientes pasos para la ejecucion
 
@@ -16,18 +15,18 @@ Para esta semana ya entramos al uso de Django y una de sus mas grandes fortaleza
     $> 
 
 
-## GET - Devolver lista de cursos completo
+## GET - Devolver lista de productos completo
 ![Image text](https://github.com/DannPandal/retos_desarrollados-back_end/blob/main/Semana03/Foro3/assets/DjangoGET-LIST.png)
 
-## GET - Retornar curso por id
+## GET - Retornar producto por id
 ![Image text](https://github.com/DannPandal/retos_desarrollados-back_end/blob/main/Semana03/Foro3/assets/DjangoGET-ELEMENT.png)
 
-## POST - agregar curso
+## POST - agregar producto
 ![Image text](https://github.com/DannPandal/retos_desarrollados-back_end/blob/main/Semana03/Foro3/assets/DjangoPOST-CREATE.png)
 
-## PUT - actualizar curso
+## PUT - actualizar producto
 ![Image text](https://github.com/DannPandal/retos_desarrollados-back_end/blob/main/Semana03/Foro3/assets/DjangoPUT-UPDATE.png)
 
-## DELETE - borrar curso
+## DELETE - borrar producto
 ![Image text](https://github.com/DannPandal/retos_desarrollados-back_end/blob/main/Semana03/Foro3/assets/DjangoDELETE-DELETE.png)
 
