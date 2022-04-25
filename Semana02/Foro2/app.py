@@ -31,6 +31,7 @@ def list_product():
     except Exception as e:
         return jsonify({"message": RESPONSE_ERROR, "error": str(e)})
 
+# * GET - devolver producto por id
 @app.route('/product/<string:id>', methods=['GET'])
 def select_product(id):
     try:

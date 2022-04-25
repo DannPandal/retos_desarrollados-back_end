@@ -1,3 +1,5 @@
+*.pyc
+
 Semana02/Foro2/envForo2/
 Semana02/Foro2/__pycache__/
 
@@ -13,3 +15,4 @@ Semana02/Semana02-Reto6/__pycache__/
 Semana02/Semana02-Reto6/env6/
 
 
+Semana03/Foro3/envForo3/
